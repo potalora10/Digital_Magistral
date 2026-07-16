@@ -36,7 +36,12 @@ module control_div (
             SHIFT_ST:   next_state = CHECK_R_ST;
             CHECK_R_ST: next_state = msb_r ? ADD_ST      : CHECK_I_ST;
             ADD_ST:     next_state = CHECK_I_ST;
-            DONE_ST:    next_state = START_ST;
+            DONE_ST:    begin
+                if (start)
+                    next_state = START_ST;   
+                else
+                    next_state = DONE_ST;  // 
+            end
             default:    next_state = START_ST;
         endcase
     end
