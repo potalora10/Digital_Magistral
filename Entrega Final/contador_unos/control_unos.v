@@ -34,7 +34,12 @@ module control_unos (
             CHECK_LSB_ST:  next_state = lsb_a  ? INCREMENTO_ST  : SHIFT_ST;
             INCREMENTO_ST: next_state = SHIFT_ST;
             SHIFT_ST:      next_state = CHECK_A_ST;
-            DONE_ST:       next_state = START_ST;
+            DONE_ST: begin
+                if (start)
+                    next_state = START_ST;   
+                else
+                    next_state = DONE_ST;  // 
+            end
             default:       next_state = START_ST;
         endcase
     end

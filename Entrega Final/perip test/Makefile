@@ -64,13 +64,27 @@ COMM_OBJS+= cores/test/perip_test.v
 #COMM_OBJS+=cores/test/multi/reg_A.v
 #COMM_OBJS+=cores/test/multi/reg_B.v
 
-COMM_OBJS+=cores/test/divisor/comp_i.v
-COMM_OBJS+=cores/test/divisor/control_div.v
-COMM_OBJS+=cores/test/divisor/divisor.v
-COMM_OBJS+=cores/test/divisor/reg_i.v
-COMM_OBJS+=cores/test/divisor/reg_Q.v
-COMM_OBJS+=cores/test/divisor/reg_R.v
-COMM_OBJS+=cores/test/divisor/sumador_comp.v
+#COMM_OBJS+=cores/test/divisor/comp_i.v
+#COMM_OBJS+=cores/test/divisor/control_div.v
+#COMM_OBJS+=cores/test/divisor/divisor.v
+#COMM_OBJS+=cores/test/divisor/reg_i.v
+#COMM_OBJS+=cores/test/divisor/reg_Q.v
+#COMM_OBJS+=cores/test/divisor/reg_R.v
+#COMM_OBJS+=cores/test/divisor/sumador_comp.v
+
+#COMM_OBJS+=cores/test/contador_unos/comp.v
+#COMM_OBJS+=cores/test/contador_unos/contador_unos.v
+#COMM_OBJS+=cores/test/contador_unos/control_unos.v
+#COMM_OBJS+=cores/test/contador_unos/reg_A.v
+#COMM_OBJS+=cores/test/contador_unos/reg_C.v
+
+COMM_OBJS+=cores/test/raiz/comp.v
+COMM_OBJS+=cores/test/raiz/control_raiz.v
+COMM_OBJS+=cores/test/raiz/raiz_cuadrada.v
+COMM_OBJS+=cores/test/raiz/reg_D.v
+COMM_OBJS+=cores/test/raiz/reg_Q.v
+COMM_OBJS+=cores/test/raiz/reg_X_acc.v
+COMM_OBJS+=cores/test/raiz/reg_X_hold.v
 
 COMM_OBJS +=  SOC.v
 

@@ -77,13 +77,32 @@ end//-----------------------------------------------mux_4
 //#  .B(B)#
 //# );#
 
-divisor mult1 ( 
+//divisor mult1 ( 
+//  .rst(reset),
+//  .clk(clk),
+//  .start(init),
+//  .done(done),
+//  .P(result),
+//  .Q(A),
+//  .V(B)
+// );
+
+//contador_unos mult1 (
+//  .rst(reset),
+//  .clk(clk),
+//  .start(init),
+//  .done(done),
+//  .C(result),
+//  .A(A)
+// );
+
+raiz_cuadrada mult1 (
   .rst(reset),
   .clk(clk),
   .start(init),
   .done(done),
-  .P(result),
-  .Q(A),
-  .V(B)
+  .Q(result),
+  .X(A)
  );
+
 endmodule

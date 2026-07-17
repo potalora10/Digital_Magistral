@@ -30,7 +30,12 @@ module control_raiz (
             START_ST: next_state = start ? CHECK_ST : START_ST;
             CHECK_ST: next_state = z     ? ADD_ST    : DONE_ST;
             ADD_ST:   next_state = CHECK_ST;
-            DONE_ST:  next_state = START_ST;
+            DONE_ST: begin
+                if (start)
+                    next_state = START_ST;   
+                else
+                    next_state = DONE_ST;  // 
+            end
             default:  next_state = START_ST;
         endcase
     end
